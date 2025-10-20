@@ -4,13 +4,16 @@ Sistema de pedidos en línea para Fast Food.
 
 ## 📝 Créditos
 
-**Proyecto original creado por:** [Nombre de tu amigo]
+**Proyecto original creado por:**
+- **Edwin Galván**
+- **Fernando Guerrero**
+- **Juan Cortéz**
 
-Este repositorio es un fork/copia del proyecto original con fines académicos.
+Este repositorio es una copia del proyecto original con fines académicos.
 
 ## 🎓 Propósito
 
-Proyecto modificado para la materia de [Nombre de la materia] - [Tu institución]
+Proyecto modificado para la materia de Desarrollo Web - TECNM
 
 ## ✨ Modificaciones realizadas
 
@@ -72,6 +75,6 @@ Este proyecto es con fines educativos únicamente.
 
 ---
 
-**Autor original:** [Nombre de tu amigo]  
-**Modificado por:** [Tu nombre]  
+**Autores originales:** Edwin Galván, Fernando Guerrero, Juan Cortéz  
+**Modificado por:** Joshy López  
 **Fecha:** Octubre 2025
