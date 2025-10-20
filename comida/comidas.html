@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comidas</title>
+    <link rel="stylesheet" type="text/css" href="../css/Estilos.css">
+</head>
+<body class="inicio">
+    <center><img src="../img/logo.JPEG" width="100"></center>
+
+    <nav class="navegacion">
+        <ul class="menu">
+            <li><a href="../usuario/inicio.php">INICIO</a></li>
+            <li><a href="comidas.html">COMIDA</a></li>
+            <li><a href="../postre/Postre.html">POSTRES</a></li>
+            <li><a href="../bebida/Bebida.html">BEBIDAS</a></li>
+            <li><a href="../usuario/login.html">LOGIN</a></li>
+            <li><a href="../usuario/registro.html">REGISTRO</a></li>
+            <li><a href="../carrito/carrito.php">CARRITO 🛒 (<span id="contador-carrito">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <center><h1>Comida Rápida</h1></center>
+
+    <div class="galeria-productos">
+        <figure>
+            <img src="../img/comida/comida1.jpg" width="150">
+            <figcaption>$40.00</figcaption>
+            <div>
+                <button class="btn-menos">-</button>
+                <input type="number" value="1" min="1" class="cantidad" readonly>
+                <button class="btn-mas">+</button>
+            </div>
+            <button class="agregar-carrito" data-id="1" data-nombre="Hamburguesa Doble" data-precio="40">Agregar</button>
+        </figure>
+
+        <figure>
+            <img src="../img/comida/comida2.jpeg" width="150">
+            <figcaption>$25.00</figcaption>
+            <div>
+                <button class="btn-menos">-</button>
+                <input type="number" value="1" class="cantidad" readonly>
+                <button class="btn-mas">+</button>
+            </div>
+            <button class="agregar-carrito" data-id="2" data-nombre="Tacos al Pastor" data-precio="25">Agregar</button>
+        </figure>
+
+        <figure>
+            <img src="../img/comida/comida3.jpeg" width="150">
+            <figcaption>$25.00</figcaption>
+            <div>
+                <button class="btn-menos">-</button>
+                <input type="number" value="1" class="cantidad" readonly>
+                <button class="btn-mas">+</button>
+            </div>
+            <button class="agregar-carrito" data-id="3" data-nombre="Burrito Especial" data-precio="25">Agregar</button>
+        </figure>
+
+        <figure>
+            <img src="../img/comida/comida4.jpg" width="150">
+            <figcaption>$18.00</figcaption>
+            <div>
+                <button class="btn-menos">-</button>
+                <input type="number" value="1" class="cantidad" readonly>
+                <button class="btn-mas">+</button>
+            </div>
+            <button class="agregar-carrito" data-id="4" data-nombre="Hot dog" data-precio="18">Agregar</button>
+        </figure>
+
+        <figure>
+            <img src="../img/comida/comida5.jpg" width="150">
+            <figcaption>$30.00</figcaption>
+            <div>
+                <button class="btn-menos">-</button>
+                <input type="number" value="1" class="cantidad" readonly>
+                <button class="btn-mas">+</button>
+            </div>
+            <button class="agregar-carrito" data-id="5" data-nombre="Papas a la Francesa" data-precio="30">Agregar</button>
+        </figure>
+    </div>
+
+    <script src="../js/carrito.js"></script>
+</body>
+</html>

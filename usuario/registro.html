@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="../css/Estilos.css">
+</head>
+<body class="inicio">
+    <center><img src="../img/logo.JPEG" width="100"></center>
+
+    <nav class="navegacion">
+        <ul class="menu">
+            <li><a href="inicio.php">INICIO</a></li>
+            <li><a href="../comida/comidas.html">COMIDA</a></li>
+            <li><a href="../postre/Postre.html">POSTRES</a></li>
+            <li><a href="../bebida/Bebida.html">BEBIDAS</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="registro.html">REGISTRO</a></li>
+            <li><a href="../carrito/carrito.php">CARRITO 🛒 (<span id="contador-carrito">0</span>)</a></li>
+            <li><a href="historial.php">HISTORIAL</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-card">
+        <h2>Formulario de Registro</h2>
+        <form action="../php/registro_usuario.php" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre" required><br>
+            <input type="text" name="apellidos" placeholder="Apellidos" required><br>
+            <input type="text" name="domicilio" placeholder="Domicilio" required><br>
+            <input type="email" name="correo" placeholder="Correo Electrónico" required><br>
+            <input type="text" name="telefono" placeholder="Teléfono" required><br>
+            <input type="date" name="fecha" required><br>
+            <input type="password" name="contrasena" placeholder="Contraseña" required><br>
+            <select name="ciudad" required>
+                <option value="">-- Selecciona tu ciudad --</option>
+                <option value="León">León</option>
+                <option value="Guanajuato">Guanajuato</option>
+            </select><br>
+            <select name="genero" required>
+                <option value="">-- Selecciona tu género --</option>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+                <option value="O">Otro</option>
+            </select><br><br>
+            <button type="submit">Registrarme</button>
+        </form>
+    </div>
+</body>
+</html>

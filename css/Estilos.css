@@ -1,0 +1,323 @@
+body.inicio {
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+/* NAV BAR */
+.navegacion {
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #f2c94c;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    text-align: center;
+    color: #fff;
+}
+
+.saludo {
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+/* Imágenes */
+img {
+    border-radius: 10px;
+}
+
+/* Textareas */
+textarea {
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+    resize: none;
+    border: none;
+    background-color: #ffffffcc;
+    color: #000;
+    font-size: 14px;
+    padding: 10px;
+}
+
+/* Botones */
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f2c94c;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: gold;
+}
+
+/* Contenedor flexible */
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.imagen {
+    flex: 1 1 400px;
+    max-width: 500px;
+}
+
+/* Centrado para mapa, textarea y botón */
+.mapa-centro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.mapa-contenedor {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Tablas para carrito, historial, etc. */
+table {
+    width: 90%;
+    margin: auto;
+    background-color: #ffffffcc;
+    color: black;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2c94c;
+    color: black;
+}
+
+table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.saludo form {
+    margin-top: 10px;
+}
+
+/* Mensajes tipo tarjeta */
+.mensaje {
+    background-color: #ffffffcc;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    font-family: sans-serif;
+    color: black;
+}
+
+.botones {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.botones a button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Galería de productos en filas horizontales de 5 */
+.galeria-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.galeria-productos figure {
+    background-color: #ffffffcc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    color: black;
+    text-align: center;
+}
+
+.galeria-productos figure img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.galeria-productos figure figcaption {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Cantidad y botones +/- */
+.galeria-productos figure div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    gap: 5px;
+}
+
+.galeria-productos .cantidad {
+    width: 40px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: white;
+    color: black;
+}
+
+/* Tarjetas para formularios: login, registro */
+.form-card {
+    background-color: #000;
+    padding: 30px;
+    max-width: 400px;
+    margin: 40px auto;
+    border-radius: 20px;
+    text-align: center;
+    color: #000;
+}
+
+.form-card input,
+.form-card select {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+}
+
+.form-card a {
+    color: #8b00ff;
+    text-decoration: none;
+}
+
+.form-card a:hover {
+    text-decoration: underline;
+}
+
+/* Asegurar texto negro dentro de mensaje */
+.mensaje h1,
+.mensaje h2,
+.mensaje h3,
+.mensaje p,
+.mensaje th,
+.mensaje td {
+    color: black !important;
+}
+
+/* Formulario de pago con tarjeta*/
+.pago-tarjeta {
+    background-color: #ffffffcc;
+    padding: 40px 30px;
+    margin-top: 40px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    text-align: center;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pago-tarjeta h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: black;
+}
+
+/* contenedor de cada campo */
+.pago-tarjeta .campo-form {
+    margin-bottom: 20px;
+}
+
+/* inputs grandes y centrados */
+.pago-tarjeta input {
+    width: 100%;
+    max-width: 450px;
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    background-color: white;
+    color: black;
+}
+
+/* botón grande centrado */
+.pago-tarjeta button {
+    width: 100%;
+    max-width: 450px;
+    background-color: #f2c94c;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    padding: 16px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pago-tarjeta button:hover {
+    background-color: gold;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bebidas</title>
+    <link rel="stylesheet" type="text/css" href="../css/Estilos.css">
+</head>
+<body class="inicio">
+    <center><img src="../img/logo.JPEG" width="100"></center>
+
+    <nav class="navegacion">
+        <ul class="menu">
+            <li><a href="../usuario/inicio.php">INICIO</a></li>
+            <li><a href="../comida/comidas.html">COMIDA</a></li>
+            <li><a href="../postre/Postre.html">POSTRES</a></li>
+            <li><a href="Bebida.html">BEBIDAS</a></li>
+            <li><a href="../usuario/login.html">LOGIN</a></li>
+            <li><a href="../usuario/registro.html">REGISTRO</a></li>
+            <li><a href="../carrito/carrito.php">CARRITO 🛒 (<span id="contador-carrito">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <center><h1>Bebidas</h1></center>
+
+    <div class="galeria-productos">
+        <figure>
+            <img src="../img/Bebidas/Arizona.jpg" width="150">
+            <figcaption>$22.00</figcaption>
+            <div>
+                <button class="btn-menos">-</button>
+                <input type="number" value="1" class="cantidad" readonly>
+                <button class="btn-mas">+</button>
+            </div>
+            <button class="agregar-carrito" data-id="6" data-nombre="Arizona" data-precio="22">Agregar</button>
+        </figure>
+
+        <figure>
+            <img src="../img/Bebidas/Coca.jpg" width="150">
+            <figcaption>$20.00</figcaption>
+            <div>
+                <button class="btn-menos">-</button>
+                <input type="number" value="1" class="cantidad" readonly>
+                <button class="btn-mas">+</button>
+            </div>
+            <button class="agregar-carrito" data-id="7" data-nombre="Coca-Cola" data-precio="20">Agregar</button>
+        </figure>
+
+        <figure>
+            <img src="../img/Bebidas/Agua.jpg" width="150">
+            <figcaption>$15.00</figcaption>
+            <div>
+                <button class="btn-menos">-</button>
+                <input type="number" value="1" class="cantidad" readonly>
+                <button class="btn-mas">+</button>
+            </div>
+            <button class="agregar-carrito" data-id="8" data-nombre="Agua Natural" data-precio="15">Agregar</button>
+        </figure>
+
+        <figure>
+            <img src="../img/Bebidas/Fuze.jpg" width="150">
+            <figcaption>$20.00</figcaption>
+            <div>
+                <button class="btn-menos">-</button>
+                <input type="number" value="1" class="cantidad" readonly>
+                <button class="btn-mas">+</button>
+            </div>
+            <button class="agregar-carrito" data-id="9" data-nombre="Fuze Tea" data-precio="20">Agregar</button>
+        </figure>
+
+        <figure>
+            <img src="../img/Bebidas/Mineral.jpg" width="150">
+            <figcaption>$18.00</figcaption>
+            <div>
+                <button class="btn-menos">-</button>
+                <input type="number" value="1" class="cantidad" readonly>
+                <button class="btn-mas">+</button>
+            </div>
+            <button class="agregar-carrito" data-id="10" data-nombre="Agua Mineral" data-precio="18">Agregar</button>
+        </figure>
+    </div>
+
+    <script src="../js/carrito.js"></script>
+</body>
+</html>

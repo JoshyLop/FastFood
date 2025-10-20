@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Postres</title>
+    <link rel="stylesheet" type="text/css" href="../css/Estilos.css">
+</head>
+<body class="inicio">
+    <center><img src="../img/logo.JPEG" width="100"></center>
+
+    <nav class="navegacion">
+        <ul class="menu">
+            <li><a href="../usuario/inicio.php">INICIO</a></li>
+            <li><a href="../comida/comidas.html">COMIDA</a></li>
+            <li><a href="Postre.html">POSTRES</a></li>
+            <li><a href="../bebida/Bebida.html">BEBIDAS</a></li>
+            <li><a href="../usuario/login.html">LOGIN</a></li>
+            <li><a href="../usuario/registro.html">REGISTRO</a></li>
+            <li><a href="../carrito/carrito.php">CARRITO 🛒 (<span id="contador-carrito">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <center><h1>Postres</h1></center>
+
+    <div class="galeria-productos">
+        <figure>
+            <img src="../img/Postres/Postre1.jpg" width="150">
+            <figcaption>$35.00</figcaption>
+            <div>
+                <button class="btn-menos">-</button>
+                <input type="number" value="1" class="cantidad" readonly>
+                <button class="btn-mas">+</button>
+            </div>
+            <button class="agregar-carrito" data-id="11" data-nombre="Brownie" data-precio="35">Agregar</button>
+        </figure>
+
+        <figure>
+            <img src="../img/Postres/Postre2.jpg" width="150">
+            <figcaption>$35.00</figcaption>
+            <div>
+                <button class="btn-menos">-</button>
+                <input type="number" value="1" class="cantidad" readonly>
+                <button class="btn-mas">+</button>
+            </div>
+            <button class="agregar-carrito" data-id="12" data-nombre="Gelatina de Frutas" data-precio="35">Agregar</button>
+        </figure>
+
+        <figure>
+            <img src="../img/Postres/Postre3.jpg" width="150">
+            <figcaption>$15.00</figcaption>
+            <div>
+                <button class="btn-menos">-</button>
+                <input type="number" value="1" class="cantidad" readonly>
+                <button class="btn-mas">+</button>
+            </div>
+            <button class="agregar-carrito" data-id="13" data-nombre="Cupcake de Vainilla" data-precio="15">Agregar</button>
+        </figure>
+
+        <figure>
+            <img src="../img/Postres/Postre4.jpg" width="150">
+            <figcaption>$25.00</figcaption>
+            <div>
+                <button class="btn-menos">-</button>
+                <input type="number" value="1" class="cantidad" readonly>
+                <button class="btn-mas">+</button>
+            </div>
+            <button class="agregar-carrito" data-id="14" data-nombre="Pay de Limon" data-precio="25">Agregar</button>
+        </figure>
+
+        <figure>
+            <img src="../img/Postres/Postre5.jpg" width="150">
+            <figcaption>$25.00</figcaption>
+            <div>
+                <button class="btn-menos">-</button>
+                <input type="number" value="1" class="cantidad" readonly>
+                <button class="btn-mas">+</button>
+            </div>
+            <button class="agregar-carrito" data-id="15" data-nombre="Rebanada de Pastel" data-precio="25">Agregar</button>
+        </figure>
+    </div>
+
+    <script src="../js/carrito.js"></script>
+</body>
+</html>

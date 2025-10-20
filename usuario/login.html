@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/Estilos.css">
+</head>
+<body class="inicio">
+    <center><img src="../img/logo.JPEG" width="100"></center>
+
+    <nav class="navegacion">
+        <ul class="menu">
+            <li><a href="inicio.php">INICIO</a></li>
+            <li><a href="../comida/comidas.html">COMIDA</a></li>
+            <li><a href="../postre/Postre.html">POSTRES</a></li>
+            <li><a href="../bebida/Bebida.html">BEBIDAS</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="registro.html">REGISTRO</a></li>
+            <li><a href="../carrito/carrito.php">CARRITO 🛒 (<span id="contador-carrito">0</span>)</a></li>
+            <li><a href="historial.php">HISTORIAL</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-card">
+        <h2>Iniciar Sesión</h2>
+        <form action="../php/login_usuario.php" method="POST">
+            <input type="email" name="correo" placeholder="Correo Electrónico" required><br>
+            <input type="password" name="contrasena" placeholder="Contraseña" required><br>
+            <a href="registro.html">¿No tienes cuenta? Regístrate</a><br><br>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+</body>
+</html>
