@@ -2,10 +2,241 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="refresh" content="0; url=usuario/inicio.php">
-	<title>Redirigiendo...</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>🍔 FastFood - Comida Rápida Deliciosa</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<style>
+		.hero-gradient {
+			background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+		}
+		.card-producto {
+			transition: all 0.3s ease;
+		}
+		.card-producto:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 12px 24px rgba(239, 68, 68, 0.3);
+		}
+		.btn-principal {
+			background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+			transition: transform 0.2s;
+		}
+		.btn-principal:hover {
+			transform: scale(1.05);
+		}
+	</style>
 </head>
-<body>
-	<p>Redirigiendo a la página principal...</p>
+<body class="bg-gray-50">
+
+	<!-- NAVBAR -->
+	<nav class="bg-white shadow-lg sticky top-0 z-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex justify-between items-center h-16">
+				<!-- Logo -->
+				<div class="flex items-center gap-2">
+					<span class="text-3xl">🍔</span>
+					<a href="/" class="text-2xl font-bold text-red-600">FastFood</a>
+				</div>
+
+				<!-- Menu -->
+				<div class="hidden md:flex items-center gap-8">
+					<a href="#categorias" class="text-gray-700 hover:text-red-600 font-medium transition">Menú</a>
+					<a href="#sobre" class="text-gray-700 hover:text-red-600 font-medium transition">Sobre Nosotros</a>
+					<a href="#contacto" class="text-gray-700 hover:text-red-600 font-medium transition">Contacto</a>
+				</div>
+
+				<!-- Botones Derecha -->
+				<div class="flex items-center gap-4">
+					<div class="relative">
+						<button onclick="toggleCarrito()" class="relative text-gray-700 hover:text-red-600 text-xl">
+							🛒
+							<span id="contador-carrito" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
+						</button>
+					</div>
+					<div class="flex gap-2">
+						<a href="usuario/login.html" class="px-4 py-2 text-gray-700 hover:text-red-600 font-medium transition">Iniciar Sesión</a>
+						<a href="usuario/registro.html" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition">Registrarse</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- HERO SECTION -->
+	<section class="hero-gradient text-white py-20">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+				<div>
+					<h1 class="text-5xl md:text-6xl font-black mb-4">¡Deliciosa Comida Rápida!</h1>
+					<p class="text-xl text-red-100 mb-6">Ordena tus platos favoritos y los recibirás en casa en 30 minutos.</p>
+					<div class="flex gap-4">
+						<a href="#categorias" class="btn-principal px-8 py-3 bg-white text-red-600 rounded-lg font-bold text-lg hover:bg-gray-100 transition">Ordenar Ahora</a>
+						<a href="#sobre" class="px-8 py-3 border-2 border-white text-white rounded-lg font-bold text-lg hover:bg-white hover:bg-opacity-10 transition">Conoce Más</a>
+					</div>
+				</div>
+				<div class="text-center">
+					<div class="text-9xl animate-bounce">🍕</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CATEGORÍAS -->
+	<section id="categorias" class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Nuestras Categorías</h2>
+			
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<!-- Comida -->
+				<a href="comida/comidas.html" class="card-producto bg-gradient-to-br from-red-50 to-orange-50 rounded-lg p-8 text-center border-2 border-red-100 hover:border-red-300">
+					<div class="text-6xl mb-4">🍔</div>
+					<h3 class="text-2xl font-bold text-gray-800 mb-2">Comida</h3>
+					<p class="text-gray-600">Hamburguesas, pizzas, sándwiches y más</p>
+					<div class="mt-4 text-red-600 font-bold">Ver Menú →</div>
+				</a>
+
+				<!-- Bebidas -->
+				<a href="bebida/Bebida.html" class="card-producto bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-8 text-center border-2 border-blue-100 hover:border-blue-300">
+					<div class="text-6xl mb-4">🥤</div>
+					<h3 class="text-2xl font-bold text-gray-800 mb-2">Bebidas</h3>
+					<p class="text-gray-600">Refrescos, jugos y bebidas frías</p>
+					<div class="mt-4 text-blue-600 font-bold">Ver Menú →</div>
+				</a>
+
+				<!-- Postres -->
+				<a href="postre/Postre.html" class="card-producto bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-8 text-center border-2 border-purple-100 hover:border-purple-300">
+					<div class="text-6xl mb-4">🍰</div>
+					<h3 class="text-2xl font-bold text-gray-800 mb-2">Postres</h3>
+					<p class="text-gray-600">Postres, helados y dulces deliciosos</p>
+					<div class="mt-4 text-purple-600 font-bold">Ver Menú →</div>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- CARACTERÍSTICAS -->
+	<section class="py-16 bg-gray-100">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-4xl font-bold text-center mb-12 text-gray-800">¿Por Qué Elegirnos?</h2>
+			
+			<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+				<div class="bg-white p-6 rounded-lg shadow-md text-center">
+					<div class="text-4xl mb-3">⚡</div>
+					<h3 class="font-bold text-lg mb-2">Rápido</h3>
+					<p class="text-gray-600">Entrega en 30 minutos garantizado</p>
+				</div>
+				<div class="bg-white p-6 rounded-lg shadow-md text-center">
+					<div class="text-4xl mb-3">🔒</div>
+					<h3 class="font-bold text-lg mb-2">Seguro</h3>
+					<p class="text-gray-600">Monitoreo en tiempo real de tu pedido</p>
+				</div>
+				<div class="bg-white p-6 rounded-lg shadow-md text-center">
+					<div class="text-4xl mb-3">😋</div>
+					<h3 class="font-bold text-lg mb-2">Delicioso</h3>
+					<p class="text-gray-600">Ingredientes frescos de calidad</p>
+				</div>
+				<div class="bg-white p-6 rounded-lg shadow-md text-center">
+					<div class="text-4xl mb-3">💰</div>
+					<h3 class="font-bold text-lg mb-2">Económico</h3>
+					<p class="text-gray-600">Los mejores precios del mercado</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- SOBRE NOSOTROS -->
+	<section id="sobre" class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+				<div class="text-6xl text-center">🚀</div>
+				<div>
+					<h2 class="text-4xl font-bold mb-4 text-gray-800">Sobre FastFood</h2>
+					<p class="text-gray-600 mb-4 text-lg">Somos la aplicación de comida rápida más confiable de la ciudad. Con más de 10 años de experiencia, sabemos cómo hacer que cada entrega sea especial.</p>
+					<p class="text-gray-600 mb-6 text-lg">Nuestro compromiso es ofrecerte comida deliciosa, rápida y segura, directamente a tu puerta.</p>
+					<div class="flex gap-4">
+						<div>
+							<div class="text-3xl font-bold text-red-600">1000+</div>
+							<p class="text-gray-600">Clientes Felices</p>
+						</div>
+						<div>
+							<div class="text-3xl font-bold text-red-600">500+</div>
+							<p class="text-gray-600">Entregas Diarias</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CONTACTO -->
+	<section id="contacto" class="py-16 bg-gray-100">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Contacto</h2>
+			
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="bg-white p-8 rounded-lg shadow-md text-center">
+					<div class="text-4xl mb-3">📞</div>
+					<h3 class="font-bold text-lg mb-2">Teléfono</h3>
+					<p class="text-gray-600">+57 (1) 1234-5678</p>
+				</div>
+				<div class="bg-white p-8 rounded-lg shadow-md text-center">
+					<div class="text-4xl mb-3">📧</div>
+					<h3 class="font-bold text-lg mb-2">Email</h3>
+					<p class="text-gray-600">info@fastfood.com</p>
+				</div>
+				<div class="bg-white p-8 rounded-lg shadow-md text-center">
+					<div class="text-4xl mb-3">📍</div>
+					<h3 class="font-bold text-lg mb-2">Ubicación</h3>
+					<p class="text-gray-600">Bogotá, Colombia</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer class="bg-gray-800 text-white py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+				<div>
+					<h3 class="font-bold text-lg mb-4">🍔 FastFood</h3>
+					<p class="text-gray-400">La comida rápida más deliciosa de la ciudad.</p>
+				</div>
+				<div>
+					<h3 class="font-bold mb-4">Navegación</h3>
+					<ul class="text-gray-400 space-y-2">
+						<li><a href="#categorias" class="hover:text-white transition">Menú</a></li>
+						<li><a href="#sobre" class="hover:text-white transition">Sobre Nosotros</a></li>
+						<li><a href="#contacto" class="hover:text-white transition">Contacto</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3 class="font-bold mb-4">Legal</h3>
+					<ul class="text-gray-400 space-y-2">
+						<li><a href="#" class="hover:text-white transition">Términos</a></li>
+						<li><a href="#" class="hover:text-white transition">Privacidad</a></li>
+						<li><a href="#" class="hover:text-white transition">Cookies</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3 class="font-bold mb-4">Síguenos</h3>
+					<div class="flex gap-4">
+						<a href="#" class="text-gray-400 hover:text-white transition text-xl">f</a>
+						<a href="#" class="text-gray-400 hover:text-white transition text-xl">𝕏</a>
+						<a href="#" class="text-gray-400 hover:text-white transition text-xl">📷</a>
+					</div>
+				</div>
+			</div>
+			<div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+				<p>&copy; 2026 FastFood. Todos los derechos reservados.</p>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		function toggleCarrito() {
+			alert('Carrito: En desarrollo');
+		}
+	</script>
+
 </body>
 </html>
