@@ -1,17 +1,10 @@
 <?php
+header('Content-Type: application/json');
 session_start();
-unset($_SESSION['carrito']);
-?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Carrito Vaciado</title>
-    <script>
-        alert('Carrito vaciado correctamente');
-        window.location.href = '../carrito/carrito.php';
-    </script>
-</head>
-<body>
-</body>
-</html>
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_GET['action'] === 'clear') {
+    unset($_SESSION['carrito']);
+    echo json_encode(['success' => true, 'message' => 'Carrito vaciado']);
+} else {
+    echo json_encode(['success' => false, 'message' => 'Método no permitido']);
+}

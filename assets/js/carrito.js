@@ -12,7 +12,7 @@ function agregarAlCarrito(id, nombre, precio) {
         cantidad: 1
     };
 
-    fetch('../../php/agregar_carrito.php', {
+    fetch('../php/agregar_carrito.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

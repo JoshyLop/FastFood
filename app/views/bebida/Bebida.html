@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🍰 Postres - FastFood</title>
+    <title>🥤 Bebidas - FastFood</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/FastFood/css/Estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/Estilos.css">
     <style>
         .product-card {
             transition: all 0.3s ease;
@@ -15,11 +15,11 @@
 
         .product-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(168, 85, 247, 0.3);
+            box-shadow: 0 12px 24px rgba(59, 130, 246, 0.3);
         }
 
         .btn-agregar {
-            background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
             transition: transform 0.2s;
         }
 
@@ -35,24 +35,24 @@
     <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <a href="/" class="flex items-center gap-2 text-2xl font-bold text-purple-600">
+                <a href="/" class="flex items-center gap-2 text-2xl font-bold text-blue-600">
                     <span>🍔</span> FastFood
                 </a>
                 <div class="flex items-center gap-6">
                     <div class="hidden md:flex gap-6">
                         <a href="/index.html#categorias"
-                            class="text-gray-700 hover:text-purple-600 font-medium">Categorías</a>
+                            class="text-gray-700 hover:text-blue-600 font-medium">Categorías</a>
                         <a href="/index.html#contacto"
-                            class="text-gray-700 hover:text-purple-600 font-medium">Contacto</a>
+                            class="text-gray-700 hover:text-blue-600 font-medium">Contacto</a>
                     </div>
                     <div class="flex gap-4">
                         <button onclick="toggleCarrito()" class="relative text-xl">
                             🛒
                             <span id="contador-carrito"
-                                class="absolute -top-2 -right-2 bg-purple-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                                class="absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
                         </button>
                         <a href="/usuario/login.html"
-                            class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium">Entrar</a>
+                            class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium">Entrar</a>
                     </div>
                 </div>
             </div>
@@ -60,25 +60,25 @@
     </nav>
 
     <!-- HEADER -->
-    <div class="bg-gradient-to-r from-purple-600 to-pink-500 text-white py-12">
+    <div class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl font-bold mb-2">🍰 Nuestros Postres</h1>
-            <p class="text-purple-100">Deliciosos postres, helados y dulces</p>
+            <h1 class="text-4xl font-bold mb-2">🥤 Nuestras Bebidas</h1>
+            <p class="text-blue-100">Refrescos, jugos y bebidas frías deliciosas</p>
         </div>
     </div>
 
     <!-- FILTERS -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex flex-wrap gap-4">
-            <button class="px-4 py-2 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700">Todos</button>
+            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700">Todos</button>
             <button
-                class="px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-100">Postres</button>
+                class="px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-100">Refrescos</button>
             <button
-                class="px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-100">Helados</button>
+                class="px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-100">Jugos</button>
             <button
-                class="px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-100">Pasteles</button>
+                class="px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-100">Batidos</button>
             <button
-                class="px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-100">Dulces</button>
+                class="px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-100">Café</button>
         </div>
     </div>
 
@@ -88,14 +88,14 @@
 
             <!-- Producto 1 -->
             <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="bg-gradient-to-br from-purple-100 to-pink-100 h-48 flex items-center justify-center">
-                    <div class="text-7xl">🍰</div>
+                <div class="bg-gradient-to-br from-blue-100 to-cyan-100 h-48 flex items-center justify-center">
+                    <div class="text-7xl">🥤</div>
                 </div>
                 <div class="p-4">
-                    <h3 class="text-lg font-bold text-gray-800 mb-1">Pastel de Chocolate</h3>
-                    <p class="text-sm text-gray-600 mb-3">Delicioso y esponjoso</p>
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Refresco Cola</h3>
+                    <p class="text-sm text-gray-600 mb-3">Frio y refrescante - 600ml</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-purple-600">$25.000</span>
+                        <span class="text-2xl font-bold text-blue-600">$100 MXN</span>
                         <button class="btn-agregar text-white px-4 py-2 rounded-lg font-bold">+</button>
                     </div>
                 </div>
@@ -103,14 +103,14 @@
 
             <!-- Producto 2 -->
             <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="bg-gradient-to-br from-purple-100 to-pink-100 h-48 flex items-center justify-center">
-                    <div class="text-7xl">🍦</div>
+                <div class="bg-gradient-to-br from-blue-100 to-cyan-100 h-48 flex items-center justify-center">
+                    <div class="text-7xl">🧃</div>
                 </div>
                 <div class="p-4">
-                    <h3 class="text-lg font-bold text-gray-800 mb-1">Helado 3 Sabores</h3>
-                    <p class="text-sm text-gray-600 mb-3">Vainilla, chocolate, fresa</p>
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Jugo Natural</h3>
+                    <p class="text-sm text-gray-600 mb-3">Naranja y limón - 500ml</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-purple-600">$12.000</span>
+                        <span class="text-2xl font-bold text-blue-600">$160 MXN</span>
                         <button class="btn-agregar text-white px-4 py-2 rounded-lg font-bold">+</button>
                     </div>
                 </div>
@@ -118,14 +118,14 @@
 
             <!-- Producto 3 -->
             <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="bg-gradient-to-br from-purple-100 to-pink-100 h-48 flex items-center justify-center">
-                    <div class="text-7xl">🧁</div>
+                <div class="bg-gradient-to-br from-blue-100 to-cyan-100 h-48 flex items-center justify-center">
+                    <div class="text-7xl">🥤</div>
                 </div>
                 <div class="p-4">
-                    <h3 class="text-lg font-bold text-gray-800 mb-1">Cupcakes (6 unid)</h3>
-                    <p class="text-sm text-gray-600 mb-3">Variados y coloridos</p>
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Batido de Fresa</h3>
+                    <p class="text-sm text-gray-600 mb-3">Delicioso y cremoso</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-purple-600">$18.000</span>
+                        <span class="text-2xl font-bold text-blue-600">$200 MXN</span>
                         <button class="btn-agregar text-white px-4 py-2 rounded-lg font-bold">+</button>
                     </div>
                 </div>
@@ -133,14 +133,14 @@
 
             <!-- Producto 4 -->
             <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="bg-gradient-to-br from-purple-100 to-pink-100 h-48 flex items-center justify-center">
-                    <div class="text-7xl">🍪</div>
+                <div class="bg-gradient-to-br from-blue-100 to-cyan-100 h-48 flex items-center justify-center">
+                    <div class="text-7xl">☕</div>
                 </div>
                 <div class="p-4">
-                    <h3 class="text-lg font-bold text-gray-800 mb-1">Galletas de Chocolate</h3>
-                    <p class="text-sm text-gray-600 mb-3">Suave y crujiente</p>
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Café Americano</h3>
+                    <p class="text-sm text-gray-600 mb-3">Café puro y aromático</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-purple-600">$10.000</span>
+                        <span class="text-2xl font-bold text-blue-600">$120 MXN</span>
                         <button class="btn-agregar text-white px-4 py-2 rounded-lg font-bold">+</button>
                     </div>
                 </div>
@@ -148,14 +148,14 @@
 
             <!-- Producto 5 -->
             <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="bg-gradient-to-br from-purple-100 to-pink-100 h-48 flex items-center justify-center">
-                    <div class="text-7xl">🍩</div>
+                <div class="bg-gradient-to-br from-blue-100 to-cyan-100 h-48 flex items-center justify-center">
+                    <div class="text-7xl">🧊</div>
                 </div>
                 <div class="p-4">
-                    <h3 class="text-lg font-bold text-gray-800 mb-1">Donas (6 unidades)</h3>
-                    <p class="text-sm text-gray-600 mb-3">Glaseadas y rellenas</p>
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Limonada Natural</h3>
+                    <p class="text-sm text-gray-600 mb-3">Fría y refrescante</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-purple-600">$14.000</span>
+                        <span class="text-2xl font-bold text-blue-600">$7.000</span>
                         <button class="btn-agregar text-white px-4 py-2 rounded-lg font-bold">+</button>
                     </div>
                 </div>
@@ -163,14 +163,14 @@
 
             <!-- Producto 6 -->
             <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="bg-gradient-to-br from-purple-100 to-pink-100 h-48 flex items-center justify-center">
-                    <div class="text-7xl">🍰</div>
+                <div class="bg-gradient-to-br from-blue-100 to-cyan-100 h-48 flex items-center justify-center">
+                    <div class="text-7xl">🥛</div>
                 </div>
                 <div class="p-4">
-                    <h3 class="text-lg font-bold text-gray-800 mb-1">Cheesecake</h3>
-                    <p class="text-sm text-gray-600 mb-3">Cremoso y delicioso</p>
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Leche Malteada</h3>
+                    <p class="text-sm text-gray-600 mb-3">Chocolate o vainilla</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-purple-600">$22.000</span>
+                        <span class="text-2xl font-bold text-blue-600">$12.000</span>
                         <button class="btn-agregar text-white px-4 py-2 rounded-lg font-bold">+</button>
                     </div>
                 </div>
@@ -178,14 +178,14 @@
 
             <!-- Producto 7 -->
             <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="bg-gradient-to-br from-purple-100 to-pink-100 h-48 flex items-center justify-center">
-                    <div class="text-7xl">🎂</div>
+                <div class="bg-gradient-to-br from-blue-100 to-cyan-100 h-48 flex items-center justify-center">
+                    <div class="text-7xl">🧃</div>
                 </div>
                 <div class="p-4">
-                    <h3 class="text-lg font-bold text-gray-800 mb-1">Brownie con Helado</h3>
-                    <p class="text-sm text-gray-600 mb-3">Caliente y frío</p>
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Smoothie Tropical</h3>
+                    <p class="text-sm text-gray-600 mb-3">Mango, piña y coco</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-purple-600">$15.000</span>
+                        <span class="text-2xl font-bold text-blue-600">$11.000</span>
                         <button class="btn-agregar text-white px-4 py-2 rounded-lg font-bold">+</button>
                     </div>
                 </div>
@@ -193,14 +193,14 @@
 
             <!-- Producto 8 -->
             <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="bg-gradient-to-br from-purple-100 to-pink-100 h-48 flex items-center justify-center">
-                    <div class="text-7xl">🥧</div>
+                <div class="bg-gradient-to-br from-blue-100 to-cyan-100 h-48 flex items-center justify-center">
+                    <div class="text-7xl">🍹</div>
                 </div>
                 <div class="p-4">
-                    <h3 class="text-lg font-bold text-gray-800 mb-1">Pay de Fresa</h3>
-                    <p class="text-sm text-gray-600 mb-3">Frutas frescas</p>
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Té Helado</h3>
+                    <p class="text-sm text-gray-600 mb-3">Sabor limón refrescante</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-purple-600">$20.000</span>
+                        <span class="text-2xl font-bold text-blue-600">$6.500</span>
                         <button class="btn-agregar text-white px-4 py-2 rounded-lg font-bold">+</button>
                     </div>
                 </div>
@@ -228,71 +228,67 @@
 </nav>
 
 <center>
-    <h1>Postres</h1>
+    <h1>Bebidas</h1>
 </center>
 
 <div class="galeria-productos">
     <figure>
-        <img src="../img/Postres/Postre1.jpg" width="150">
-        <figcaption>$35.00</figcaption>
+        <img src="../img/Bebidas/Arizona.jpg" width="150">
+        <figcaption>$440.00 MXN</figcaption>
         <div>
             <button class="btn-menos">-</button>
             <input type="number" value="1" class="cantidad" readonly>
             <button class="btn-mas">+</button>
         </div>
-        <button class="agregar-carrito" data-id="11" data-nombre="Brownie" data-precio="35">Agregar</button>
+        <button class="agregar-carrito" data-id="6" data-nombre="Arizona" data-precio="440">Agregar</button>
     </figure>
 
     <figure>
-        <img src="../img/Postres/Postre2.jpg" width="150">
-        <figcaption>$35.00</figcaption>
+        <img src="../img/Bebidas/Coca.jpg" width="150">
+        <figcaption>$400.00 MXN</figcaption>
         <div>
             <button class="btn-menos">-</button>
             <input type="number" value="1" class="cantidad" readonly>
             <button class="btn-mas">+</button>
         </div>
-        <button class="agregar-carrito" data-id="12" data-nombre="Gelatina de Frutas" data-precio="35">Agregar</button>
+        <button class="agregar-carrito" data-id="7" data-nombre="Coca-Cola" data-precio="400">Agregar</button>
     </figure>
 
     <figure>
-        <img src="../img/Postres/Postre3.jpg" width="150">
-        <figcaption>$15.00</figcaption>
+        <img src="../img/Bebidas/Agua.jpg" width="150">
+        <figcaption>$300.00 MXN</figcaption>
         <div>
             <button class="btn-menos">-</button>
             <input type="number" value="1" class="cantidad" readonly>
             <button class="btn-mas">+</button>
         </div>
-        <button class="agregar-carrito" data-id="13" data-nombre="Cupcake de Vainilla" data-precio="15">Agregar</button>
+        <button class="agregar-carrito" data-id="8" data-nombre="Agua Natural" data-precio="300">Agregar</button>
     </figure>
 
     <figure>
-        <img src="../img/Postres/Postre4.jpg" width="150">
-        <figcaption>$25.00</figcaption>
+        <img src="../img/Bebidas/Fuze.jpg" width="150">
+        <figcaption>$400.00 MXN</figcaption>
         <div>
             <button class="btn-menos">-</button>
             <input type="number" value="1" class="cantidad" readonly>
             <button class="btn-mas">+</button>
         </div>
-        <button class="agregar-carrito" data-id="14" data-nombre="Pay de Limon" data-precio="25">Agregar</button>
+        <button class="agregar-carrito" data-id="9" data-nombre="Fuze Tea" data-precio="400">Agregar</button>
     </figure>
 
     <figure>
-        <img src="../img/Postres/Postre5.jpg" width="150">
-        <figcaption>$25.00</figcaption>
+        <img src="../img/Bebidas/Mineral.jpg" width="150">
+        <figcaption>$360.00 MXN</figcaption>
         <div>
             <button class="btn-menos">-</button>
             <input type="number" value="1" class="cantidad" readonly>
             <button class="btn-mas">+</button>
         </div>
-        <button class="agregar-carrito" data-id="15" data-nombre="Rebanada de Pastel" data-precio="25">Agregar</button>
+        <button class="agregar-carrito" data-id="10" data-nombre="Agua Mineral" data-precio="360">Agregar</button>
     </figure>
 </div>
 
-<!-- Scripts -->
-<script src="js/index.js"></script>
-<script src="js/productos.js"></script>
-<script src="js/carrito.js"></script>
-
+<script src="../js/carrito.js"></script>
 </body>
 
 </html>

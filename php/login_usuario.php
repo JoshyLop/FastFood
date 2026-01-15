@@ -1,32 +1,36 @@
 <?php
+header('Content-Type: application/json');
 session_start();
-include 'conexion.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $correo = $_POST['correo'] ?? '';
-    $contrasena = $_POST['contrasena'] ?? '';
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $data = json_decode(file_get_contents('php://input'), true) ?? $_POST;
+    
+    $email = trim($data['email'] ?? $data['correo'] ?? '');
+    $password = $data['password'] ?? $data['contrasena'] ?? '';
 
-    $sql = "SELECT ID, Nombre FROM Usuarios WHERE Correo = ? AND Contraseña = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $correo, $contrasena);
-    $stmt->execute();
-    $stmt->store_result();
+    try {
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../db/fastfood.db');
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    if ($stmt->num_rows > 0) {
-        // Usuario encontrado
-        $stmt->bind_result($id, $nombre);
-        $stmt->fetch();
+        $sql = "SELECT id, nombre, email, rol FROM usuarios WHERE email = ? AND contrasena = ?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$email, $password]);
+        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        $_SESSION['usuario_id'] = $id;
-        $_SESSION['usuario_nombre'] = $nombre;
+        if ($usuario) {
+            $_SESSION['usuario_id'] = $usuario['id'];
+            $_SESSION['usuario_nombre'] = $usuario['nombre'];
+            $_SESSION['usuario_email'] = $usuario['email'];
+            $_SESSION['usuario_rol'] = $usuario['rol'];
 
-        echo "<script>alert('¡Bienvenido $nombre!'); window.location.href='../usuario/inicio.php';</script>";
-    } else {
-        echo "<script>alert('Correo o contraseña incorrectos.'); window.history.back();</script>";
+            echo json_encode(['success' => true, 'message' => "¡Bienvenido {$usuario['nombre']}!", 'redirect' => 'inicio.php']);
+        } else {
+            $response = ['success' => false, 'message' => 'Email o contraseña incorrectos'];
+            echo json_encode($response);
+        }
+    } catch (Exception $e) {
+        echo json_encode(['success' => false, 'message' => 'Error: ' . $e->getMessage()]);
     }
-
-    $stmt->close();
-    $conn->close();
 } else {
-    echo "Acceso no permitido.";
+    echo json_encode(['success' => false, 'message' => 'Método no permitido']);
 }

@@ -1,15 +1,23 @@
 <?php
+header('Content-Type: application/json');
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $id = trim($_POST['id'] ?? '');
-    $nombre = trim($_POST['nombre'] ?? '');
-    $precio = floatval($_POST['precio'] ?? 0);
-    $cantidad = intval($_POST['cantidad'] ?? 1);
+    // Intentar leer JSON primero, luego fallback a POST
+    $data = json_decode(file_get_contents('php://input'), true);
+    
+    if (!$data) {
+        $data = $_POST;
+    }
+    
+    $id = trim($data['id'] ?? '');
+    $nombre = trim($data['nombre'] ?? '');
+    $precio = floatval($data['precio'] ?? 0);
+    $cantidad = intval($data['cantidad'] ?? 1);
 
     // Validar datos básicos
     if ($id === '' || $nombre === '' || $precio <= 0 || $cantidad <= 0) {
-        echo "Datos inválidos.";
+        echo json_encode(['success' => false, 'message' => 'Datos inválidos']);
         exit;
     }
 
@@ -27,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             break;
         }
     }
-    unset($item); // Libera la referencia
+    unset($item);
 
     // Si no se encontró, agregar nuevo producto
     if (!$encontrado) {
@@ -39,8 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         ];
     }
 
-    echo "Producto agregado al carrito: $nombre";
+    echo json_encode(['success' => true, 'message' => "Producto agregado: $nombre"]);
 } else {
-    echo "Solicitud no válida.";
+    echo json_encode(['success' => false, 'message' => 'Método no permitido']);
 }
 ?>
